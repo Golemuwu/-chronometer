@@ -1,0 +1,108 @@
+*{
+    color:yellowgreen;
+    color: #C815F9;
+    margin: 0 auto;
+    /*background-color: royalblue;*/
+}
+
+canvas{
+    border: double;
+    /*width: 58vw;*/
+    height: 70vh;
+    /*margin-left: 1vw;*/
+   /* text-align: center;
+    display: inline-block;*/
+    position: relative;
+    left: 50%;
+    /*70 opx de margin left*/
+    margin-left: -13vh;;
+}
+
+/*h1{
+    color: green;
+}*/
+
+
+
+
+.top-input{
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 1vh;
+    padding: 1vh 1vh;
+    /*background-color: skyblue;*/
+    border: double gray;
+}
+
+.time{
+    width: 60vw;
+    height: 80vh;
+    padding: 20vh;
+    
+}
+
+#top{
+    position: sticky;
+    top: 0;
+}
+
+/*h1:hover{
+    color: royalblue;
+    margin: 10vw;
+}*/
+
+#historial{
+    background-color: rgb(174, 205, 247);
+    
+    width: 25vw;
+    height: 80vh;
+    
+    display: inline-block;
+    margin-left: 5vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#Codigo{
+    /*margin-left: 38vw;*/
+    margin-left: 2vw;
+    width: 15vw;
+}
+
+/*#Codigo:focus{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-left: 37vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}*/
+
+#div-canvas{
+    background-color: teal;
+    background-color: #53771D;
+    
+    margin-left: 5vw;
+    height: 80vh;
+    width: 60vw;
+    float: left;
+}
+
+#button-start{
+    width: 5vw;
+    margin-left: 2vw;
+}
+
+#button-getCode{
+    width: 7vw;
+    margin-left: 38vw;
+}
+
+#button-guardar{
+    width: 7vw;
+    margin-left: 2vw;
+}
+
+#button-pause{
+    width: 8vw;
+    margin-left: 46vw;
+}

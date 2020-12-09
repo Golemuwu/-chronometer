@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro (NC)</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body id="myBody">
+        <div id="top">
+                <input type="button" value="Start" class="top-input" onclick="start()">
+        </div>
+
+        <div id="subtop">
+                
+        <input type="button" value="Get code" id="button-getCode" onclick="getCode()">
+        <input type="text" placeholder="Insert code here" id="Codigo" onchange="escribirCodigo()">
+        
+        </div>
+        <br>
+        <br>
+        <div id="div-canvas">
+                <canvas id="D-canvas" Proporcion="si" ></canvas>
+                <br>
+                <div  id="div-buttons">
+                <input type="button" name="Up"  value="Up" id="">
+                <input type="button" name="Down" value="Down" id="">
+                <input type="button" name="Plus" value="Plus" id="">
+                <input type="button" name="Delete" value="Delete" id="">
+                <label for="">Type:</label>
+                <select name="" id="">
+                        <option value="T">Timer</option>
+                        <option value="S">Set Velue</option>
+                        <option value="Q">Question</option>
+                        <option value="V">Void</option>
+                </select>
+                <label for="">ID/NAME</label>
+                <input type="text">
+                <label for="">Tiempo/Accion/Pregunta</label>
+                <label for="">Color/Set/Comparacion</label>
+                <input type="color" name="" id="">
+                <label for="">Salida1</label>
+                <input type="number">
+                <label for="">Salida2</label>
+                <input type="number" placeholder="Hola">
+                </div>
+        </div>
+        <div id="historial">
+                <div id="historial-S">
+                    <h1>
+                        Hola, bienvenido. En esta pagina puedes crear un cronometro en base a un diagrama de flujo. Me he esforzado mucho para que sea lo más intuitivo posible, sin embargo he decidido aprovechar este espacio como guia por si acaso.
+                        A la izquierda ahora mismo estas viendo un diagrama de ejemplo, en el cual se alterna entre Estudiar y descansar, pero al tercer ciclo tomamos un tiempo para comer.
+
+                        <br>
+
+                        Este esta conformado por bloques con ciertas funciones, cada uno con una salida asignada la cual es la que sale por debajo del bloque.
+                        De esta forma podemos saber el orden en el que los bloques actuarán. En el caso de los bloques de pregunta, los que tienen forma de rombo, hay dos salidas, una en caso de que la respuesta sea afirmativa y otra en caso de que sea negativa. En este último caso la difurcacion que corresponde a la salida verdadera es la primera.
+                        Para navegar el diagrama y así modificarlo tenemos botones de subir y bajar, indicando el bloque seleccionado por un borde rojo. Para añadir o quitar bloques se usan los botones de "Plus" y "Delete" respectivamete.
+                        Para modificar un bloque se oprime el boton "Entrar" en el bloque seleccionado. Entonces se nos permitirá cambiar los atributos que lo describen, empezando por el tipo de bloque, teniendo las opciones "Timer", "Question", y "Set".
+
+                        <br>
+
+                        Los bloques de "Timer" están dados por su nombre, el color que adopta la pagina al estar en dicho bloque, el tiempo que dura la pagina en ese bloque, y el bloque al cuál va una vez terminado el tiempo.
+
+                        <br>
+
+                        Los bloques de "Question" y "Set" son practicamente iguales, ambos tienen la "ID" de la variable a la que hacen referencia, y su forma de interactuar con ella: sumar, restar,e igualar para "Set"; y comparar si la variable es menor, mayor, o igual a cierto valor en el bloque de "Question".
+                        Es importante aclarar que todas las variables valen 0 por defecto, o sea al principio de la ejecución.
+
+                        <br>
+
+                        Se puede utilizar el boton "Get Code" para tener una version encriptada del diagrama en el portapapeles y se puede colocar en donde dice "insert code here" para cargarlo, de esta forma es posible guardarlo y usarlo más tarde o incluso enviarselo a un tercero.
+
+                        <br>
+
+                        Por último para ejecutar el cronometro se debe clickear en "Start", en al parte superior de la página. Con la tecla "P" se podrá pausar con el objetivo de corregir el diagrama si el tiempo de una actividad fue incorrecto o cualquier otro inconveniente. Todo el tiempo que se pase en un bloque de Timer o e una pausa se verá reflejado en el historial para su comodidad. Y en caso de querer volver a alterar el diagrama se debe clickear en el boton "Diagram".
+                    </h1>
+                </div>
+                    <div id="historial-D"></div>
+        </div>
+        <script src="src.js"></script>
+</body>
+</html>
